@@ -1,14 +1,16 @@
 import java.awt.*;
+import javax.swing.*;
 import java.awt.event.*;
 
 public class TConverter extends WindowAdapter implements ActionListener   {
     Frame f;
-    Label l1, l2, l3, l4;
+    Label l0, l1, l2, l3, l4;
     Choice tc1, tc2;
     TextField t1, t2;
     Button b;
      public TConverter(){
         f=new  Frame ("Tempreture converter");
+       l0 = new Label("Tempreture Converter");
         l1 = new Label("To");
         l2 = new Label("Enter the Value:");
         l3 = new Label("Converted Value:");
@@ -22,18 +24,26 @@ public class TConverter extends WindowAdapter implements ActionListener   {
         t1 = new TextField();
         t2 = new TextField();
         b = new Button("Convert");
+        l0.setBounds(75, 80, 230, 20);
         tc1.setBounds(200, 145, 100, 20);
         t1.setBounds(65, 145, 100, 20);
         l1.setBounds(200, 180, 50, 20);
         l4.setBounds(200, 125, 50, 20);
-        l2.setBounds(70, 125, 100, 20);
-        l3.setBounds(70, 180, 100, 20);
+        l2.setBounds(65, 125, 100, 20);
+        l3.setBounds(63, 180, 100, 20);
         tc2.setBounds(200, 200, 100, 20);
         t2.setBounds(65, 200, 100, 20);
-        b.setBounds(138, 250, 100, 20);
+        b.setBounds(130, 250, 100, 20);
         b.setBackground(Color.LIGHT_GRAY);
        t2.setEditable(false);
+        l0.setFont(new Font("Arial", Font.BOLD, 20));
+        l1.setFont(new Font("Arial", Font.BOLD,12));
+        l2.setFont(new Font("Arial", Font.BOLD,12));
+        l3.setFont(new Font("Arial", Font.BOLD,12));
+        l4.setFont(new Font("Arial", Font.BOLD,12));
+        b.setFont(new Font("Arial", Font.BOLD,12));
         b.addActionListener(this);
+       f.add(l0);
        f.add(tc1);
         f.add(tc2);
         f.add(l1);
